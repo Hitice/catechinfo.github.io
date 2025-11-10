@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CATECH Holding — Integrated Infrastructure & Digital Fabrication</title>
-  <meta name="description" content="CATECH Holding — integrated infrastructure, automation and digital fabrication for PMEs. CATECH Info, Lab, Systems, Cloud." />
+  <title>CATECH Holding — Infraestrutura Integrada & Fabricação Digital</title>
+  <meta name="description" content="CATECH Holding — infraestrutura integrada, automação e fabricação digital para PMEs. CATECH Info, Lab, Systems, Cloud." />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
   <!-- Font Awesome (CDN) -->
@@ -68,8 +68,10 @@
     .holding {
       background:linear-gradient(180deg, #ffffff, #f7faf8);
       border-radius:14px;padding:22px;border:1px solid var(--card-border);display:flex;align-items:center;justify-content:space-between;
-      box-shadow:var(--shadow)
+      box-shadow:var(--shadow); cursor:pointer; transition:transform .18s ease,box-shadow .18s ease; outline:none;
     }
+    .holding:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(8,10,10,0.06)}
+    .holding:focus{box-shadow:0 18px 40px rgba(15,20,18,0.08);transform:translateY(-6px)}
     .holding .left{display:flex;gap:14px;align-items:center}
     .holding strong{font-size:18px}
     .subs-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:12px}
@@ -88,7 +90,7 @@
     .mission p{margin:8px 0 0;color:var(--muted)}
     /* footer */
     footer{margin-top:36px;padding:20px 0;border-top:1px solid var(--steel);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-    .contact{color:var(--muted);font-size:14px}
+    .contact{color:var(--muted);font-size:14px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
     .social a{margin-left:10px;color:var(--muted);text-decoration:none}
     .social a:hover{color:var(--accent)}
     /* modal */
@@ -107,61 +109,62 @@
       .subs-row{grid-template-columns:1fr}
       header.top{flex-direction:column;align-items:flex-start;gap:12px}
       .holding{flex-direction:column;align-items:flex-start;gap:12px}
+      .contact{flex-direction:column; align-items:flex-start;}
     }
     /* subtle interactions */
     .icon {opacity:0.9}
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
   <div class="wrap" id="main">
-    <header class="top" role="banner" aria-label="CATECH header">
+    <header class="top" role="banner" aria-label="Cabeçalho CATECH">
       <div class="brand" aria-label="branding">
         <div class="logo" aria-hidden="true">C⌁</div>
         <div>
           <h1 id="brand-title">CATECH Holding</h1>
-          <p id="brand-sub">Integrated infrastructure, automation and digital fabrication</p>
+          <p id="brand-sub">Infraestrutura integrada, automação e fabricação digital</p>
         </div>
       </div>
-      <nav class="controls" aria-label="controls">
+      <nav class="controls" aria-label="controles">
         <button class="lang-btn" id="lang-en" aria-pressed="true" aria-label="English">🇬🇧 EN</button>
         <button class="lang-btn" id="lang-pt" aria-pressed="false" aria-label="Português">🇧🇷 PT</button>
       </nav>
     </header>
     <main>
       <!-- HERO -->
-      <section class="hero" aria-label="intro">
+      <section class="hero" aria-label="introdução">
         <div>
           <div id="intro-text">
-            <h2 class="lead" id="lead-title">CATECH Holding — Systems for the modern enterprise</h2>
-            <p class="sub" id="lead-sub">We integrate infrastructure, automation and digital fabrication into reliable, compliant solutions for SMEs and light industry.</p>
+            <h2 class="lead" id="lead-title">CATECH Holding — Sistemas para a empresa moderna</h2>
+            <p class="sub" id="lead-sub">Integramos infraestrutura, automação e fabricação digital em soluções confiáveis e em conformidade, projetadas para PMEs e indústria leve.</p>
           </div>
-          <div class="actions" role="group" aria-label="primary actions">
-            <a class="btn primary" href="mailto:adm.nuvem@protonmail.com" id="contact-sales">Contact Sales</a>
+          <div class="actions" role="group" aria-label="ações principais">
+            <a class="btn primary" href="mailto:adm.nuvem@protonmail.com" id="contact-sales">Contato Comercial</a>
             <a class="btn" href="https://wa.me/5534991176599" target="_blank" id="whatsapp" rel="noopener">WhatsApp</a>
           </div>
         </div>
-        <aside class="aside-card" aria-label="snapshot">
-          <h4 style="margin:0 0 8px">Snapshot</h4>
+        <aside class="aside-card" aria-label="resumo">
+          <h4 id="snapshot-title" style="margin:0 0 8px">Resumo</h4>
           <div class="meta-row">
-            <div class="meta"><span id="meta-focus-label">Focus</span><span><strong id="meta-focus">PMEs · Industry</strong></span></div>
-            <div class="meta"><span id="meta-offer-label">Offer</span><span><strong id="meta-offer">Infra · Automation · Lab · Cloud</strong></span></div>
-            <div class="meta"><span id="meta-comp-label">Compliance</span><span><strong id="meta-comp">LGPD · ISO 27001</strong></span></div>
+            <div class="meta"><span id="meta-focus-label">Foco</span><span><strong id="meta-focus">PMEs · Indústria</strong></span></div>
+            <div class="meta"><span id="meta-offer-label">Oferta</span><span><strong id="meta-offer">Infra · Automação · Lab · Cloud</strong></span></div>
+            <div class="meta"><span id="meta-comp-label">Conformidade</span><span><strong id="meta-comp">LGPD · ISO 27001</strong></span></div>
           </div>
         </aside>
       </section>
       <!-- ORGANOGRAM -->
-      <section class="section" aria-label="organogram">
+      <section class="section" aria-label="organograma">
         <div class="org-title">
-          <h2 id="about-title">About the Holding</h2>
+          <h2 id="about-title">Sobre a Holding</h2>
         </div>
-        <p class="org-desc" id="about-desc">CATECH Holding unifies technology, engineering and production in a single governance model — delivering traceability, modular services and recurring SLA contracts.</p>
-        <div class="org-chart" role="group" aria-label="organizational chart">
-          <div class="holding" aria-hidden="false">
+        <p class="org-desc" id="about-desc">A CATECH Holding une tecnologia, engenharia e produção em um modelo de governança único, garantindo rastreabilidade, serviços modulares e contratos SLA recorrentes para soluções eficientes.</p>
+        <div class="org-chart" role="group" aria-label="organograma">
+          <div class="holding" role="button" tabindex="0" data-key="holding" aria-labelledby="holding-name holding-sub">
             <div class="left">
               <div style="display:flex;flex-direction:column">
                 <strong id="holding-name">CATECH Holding</strong>
-                <div style="color:var(--muted);font-size:13px;margin-top:6px" id="holding-sub">Integrated Infrastructure • Automation • Digital Fabrication</div>
+                <div style="color:var(--muted);font-size:13px;margin-top:6px" id="holding-sub">Infraestrutura Integrada • Automação • Fabricação Digital</div>
               </div>
             </div>
             <div style="text-align:right;color:var(--muted);font-size:13px">
@@ -169,51 +172,52 @@
               <div id="holding-city">Uberlândia - MG</div>
             </div>
           </div>
-          <div class="subs-row" role="list" aria-label="subsidiaries">
+          <div class="subs-row" role="list" aria-label="subsidiárias">
             <div class="sub" role="button" tabindex="0" data-key="info" aria-labelledby="sub-info-title sub-info-desc">
               <div>
                 <div id="sub-info-title" class="title">CATECH Info</div>
-                <div id="sub-info-desc" class="blurb">Infrastructure, security and managed IT services for corporate environments.</div>
+                <div id="sub-info-desc" class="blurb">Infraestrutura, segurança e serviços de TI gerenciados para ambientes corporativos.</div>
               </div>
-              <div style="font-size:12px;color:var(--muted);margin-top:10px">Click or press Enter for details</div>
+              <div class="sub-prompt" style="font-size:12px;color:var(--muted);margin-top:10px">Clique ou pressione Enter para detalhes</div>
             </div>
             <div class="sub" role="button" tabindex="0" data-key="systems" aria-labelledby="sub-sys-title sub-sys-desc">
               <div>
                 <div id="sub-sys-title" class="title">CATECH Systems</div>
-                <div id="sub-sys-desc" class="blurb">Automation, PLCs and integrated IoT solutions for operations.</div>
+                <div id="sub-sys-desc" class="blurb">Automação, CLPs e soluções IoT integradas para operações eficientes.</div>
               </div>
-              <div style="font-size:12px;color:var(--muted);margin-top:10px">Click or press Enter for details</div>
+              <div class="sub-prompt" style="font-size:12px;color:var(--muted);margin-top:10px">Clique ou pressione Enter para detalhes</div>
             </div>
             <div class="sub" role="button" tabindex="0" data-key="lab" aria-labelledby="sub-lab-title sub-lab-desc">
               <div>
                 <div id="sub-lab-title" class="title">CATECH Lab</div>
-                <div id="sub-lab-desc" class="blurb">Digital fabrication: 3D printing, CNC and prototyping for product development.</div>
+                <div id="sub-lab-desc" class="blurb">Fabricação digital: impressão 3D, CNC e prototipagem para desenvolvimento de produtos.</div>
               </div>
-              <div style="font-size:12px;color:var(--muted);margin-top:10px">Click or press Enter for details</div>
+              <div class="sub-prompt" style="font-size:12px;color:var(--muted);margin-top:10px">Clique ou pressione Enter para detalhes</div>
             </div>
             <div class="sub" role="button" tabindex="0" data-key="cloud" aria-labelledby="sub-cloud-title sub-cloud-desc">
               <div>
                 <div id="sub-cloud-title" class="title">CATECH Cloud</div>
-                <div id="sub-cloud-desc" class="blurb">Hybrid cloud, VPS and managed hosting with local redundancy.</div>
+                <div id="sub-cloud-desc" class="blurb">Nuvem híbrida, VPS e hospedagem gerenciada com redundância local.</div>
               </div>
-              <div style="font-size:12px;color:var(--muted);margin-top:10px">Click or press Enter for details</div>
+              <div class="sub-prompt" style="font-size:12px;color:var(--muted);margin-top:10px">Clique ou pressione Enter para detalhes</div>
             </div>
           </div>
         </div>
       </section>
       <!-- Mission -->
-      <section class="mission" aria-label="mission">
-        <h3 id="mission-title">Mission</h3>
-        <p id="mission-text">Deliver integrated technical solutions that simplify digital transformation for SMEs — combining infrastructure, automation and manufacturing into accountable, scalable services.</p>
+      <section class="mission" aria-label="missão">
+        <h3 id="mission-title">Missão</h3>
+        <p id="mission-text">Oferecer soluções técnicas integradas que facilitam a transformação digital para PMEs, combinando infraestrutura, automação e fabricação em serviços escaláveis, responsáveis e de alto valor.</p>
       </section>
     </main>
     <!-- FOOTER -->
     <footer>
       <div class="contact" id="footer-contact">
-        <div><img src="footer.png" alt="CATECH Holding" style="vertical-align:middle; margin-right:5px; height:1.2em;"> — <a href="mailto:adm.nuvem@protonmail.com">adm.nuvem@protonmail.com</a></div>
-        <div>Tel: +55 (34) 99117-6599 · Uberlândia - MG</div>
+        <span><img src="footer.png" alt="CATECH Holding" style="vertical-align:middle; margin-right:5px; height:3em;"></span>
+        <a href="mailto:adm.nuvem@protonmail.com">adm.nuvem@protonmail.com</a> · 
+        <a href="tel:+5534991176599">+55 (34) 99117-6599</a> · Uberlândia - MG
       </div>
-      <div class="social" aria-label="social links">
+      <div class="social" aria-label="links sociais">
         <a href="https://github.com/Hitice" target="_blank" aria-label="GitHub" rel="noopener"><i class="fa-brands fa-github icon"></i></a>
         <a href="https://t.me/Hitice" target="_blank" aria-label="Telegram" rel="noopener"><i class="fa-brands fa-telegram icon"></i></a>
         <a href="https://wa.me/5534991176599" target="_blank" aria-label="WhatsApp" rel="noopener"><i class="fa-brands fa-whatsapp icon"></i></a>
@@ -223,17 +227,13 @@
   <!-- MODAL BACKDROP -->
   <div class="modal-backdrop" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal" role="document">
-      <button class="close" id="modalClose" aria-label="Close dialog">&times;</button>
-      <h3 id="modal-title">Title</h3>
-      <p id="modal-intro">Intro</p>
+      <button class="close" id="modalClose" aria-label="Fechar diálogo">&times;</button>
+      <h3 id="modal-title">Título</h3>
+      <p id="modal-intro">Introdução</p>
       <div id="modal-details" class="meta"></div>
     </div>
   </div>
   <script>
-    /*
-      Data model for content in both languages.
-      No duplicate functions/vars. Clean, deterministic.
-    */
     (function () {
       const el = {
         langEnBtn: document.getElementById('lang-en'),
@@ -243,7 +243,10 @@
         leadTitle: document.getElementById('lead-title'),
         leadSub: document.getElementById('lead-sub'),
         contactSales: document.getElementById('contact-sales'),
-        whatsapp: document.getElementById('whatsapp'),
+        snapshotTitle: document.getElementById('snapshot-title'),
+        metaFocusLabel: document.getElementById('meta-focus-label'),
+        metaOfferLabel: document.getElementById('meta-offer-label'),
+        metaCompLabel: document.getElementById('meta-comp-label'),
         metaFocus: document.getElementById('meta-focus'),
         metaOffer: document.getElementById('meta-offer'),
         metaComp: document.getElementById('meta-comp'),
@@ -251,85 +254,111 @@
         aboutDesc: document.getElementById('about-desc'),
         holdingName: document.getElementById('holding-name'),
         holdingSub: document.getElementById('holding-sub'),
+        missionTitle: document.getElementById('mission-title'),
         missionText: document.getElementById('mission-text'),
+        holding: document.querySelector('.holding'),
         subs: Array.from(document.querySelectorAll('.sub')),
+        subPrompts: Array.from(document.querySelectorAll('.sub-prompt')),
         modalWrap: document.getElementById('modal'),
         modalTitle: document.getElementById('modal-title'),
         modalIntro: document.getElementById('modal-intro'),
         modalDetails: document.getElementById('modal-details'),
-        modalClose: document.getElementById('modalClose'),
-        wrap: document.querySelector('.wrap')
+        modalClose: document.getElementById('modalClose')
       };
       const content = {
         en: {
           brandTitle: "CATECH Holding",
-          brandSub: "Integrated infrastructure, automation and digital fabrication",
+          brandSub: "Integrated infrastructure, automation, and digital fabrication for modern enterprises",
           leadTitle: "CATECH Holding — Systems for the modern enterprise",
-          leadSub: "We integrate infrastructure, automation and digital fabrication into reliable, compliant solutions for SMEs and light industry.",
+          leadSub: "We integrate infrastructure, automation, and digital fabrication into reliable, compliant solutions tailored for SMEs and light industry, enabling efficient digital transformation.",
+          contactSales: "Contact Sales",
+          snapshotTitle: "Snapshot",
+          metaFocusLabel: "Focus",
+          metaOfferLabel: "Offer",
+          metaCompLabel: "Compliance",
           aboutTitle: "About the Holding",
-          aboutDesc: "CATECH Holding unifies technology, engineering and production in a single governance model — delivering traceability, modular services and recurring SLA contracts.",
+          aboutDesc: "CATECH Holding unifies technology, engineering, and production under a single governance model, delivering traceability, modular services, and recurring SLA contracts for seamless operations.",
           holdingName: "CATECH Holding",
           holdingSub: "Integrated Infrastructure • Automation • Digital Fabrication",
-          missionText: "Deliver integrated technical solutions that simplify digital transformation for SMEs — combining infrastructure, automation and manufacturing into accountable, scalable services.",
+          missionTitle: "Mission",
+          missionText: "To deliver integrated technical solutions that simplify digital transformation for SMEs, combining infrastructure, automation, and manufacturing into accountable, scalable, and high-value services.",
           metaFocus: "SMEs · Industry",
           metaOffer: "Infra · Automation · Lab · Cloud",
           metaComp: "LGPD · ISO 27001",
+          subDetailsPrompt: "Click or press Enter for details",
           subs: {
+            holding: {
+              title: "CATECH Holding",
+              intro: "A unified holding company integrating advanced technology solutions for modern enterprises.",
+              details: "<strong>How We Operate:</strong> CATECH Holding operates through a centralized governance model, seamlessly integrating its subsidiaries (Info, Systems, Lab, and Cloud) to provide end-to-end solutions with full traceability, compliance, and modular SLAs for efficient service delivery.<br><br><strong>Why Attractive to the Market:</strong> For SMEs navigating digital transformation, CATECH offers scalable, cost-effective solutions that minimize vendor complexity, ensure regulatory compliance (LGPD, ISO 27001), and drive operational efficiency, allowing businesses to focus on growth."
+            },
             info: {
               title: "CATECH Info",
-              intro: "Infrastructure & security — managed IT and corporate networks.",
-              details: "<strong>What we do:</strong> Network design, servers (Linux/Windows), backups, VPN, corporate security, LGPD compliance, remote monitoring and SLA-managed operations.<br><br><strong>Clients:</strong> SMEs, healthcare, professional services."
+              intro: "Infrastructure and security — managed IT and corporate networks for reliable performance.",
+              details: "<strong>What We Do:</strong> Design networks, manage Linux/Windows servers, handle backups, VPNs, corporate security, LGPD compliance, remote monitoring, and SLA-driven operations.<br><br><strong>Clients:</strong> SMEs, healthcare, and professional services seeking robust, secure IT foundations."
             },
             systems: {
               title: "CATECH Systems",
-              intro: "Automation & IoT — PLCs, controllers and integrated process control.",
-              details: "<strong>What we do:</strong> PLC programming, sensor networks, industrial & commercial automation, remote telemetry, and integration with enterprise systems.<br><br><strong>Approach:</strong> Modular systems, field integration, lifetime support and documentation."
+              intro: "Automation and IoT — PLCs, controllers, and integrated process controls for optimized operations.",
+              details: "<strong>What We Do:</strong> Program PLCs, deploy sensor networks, automate industrial and commercial processes, enable remote telemetry, and integrate with enterprise systems.<br><br><strong>Approach:</strong> Modular designs, on-site integration, ongoing support, and comprehensive documentation for long-term reliability."
             },
             lab: {
               title: "CATECH Lab",
-              intro: "Digital fabrication — 3D printing, CNC and prototyping for product development.",
-              details: "<strong>Capabilities:</strong> High-precision 3D printing (<0.05mm), CNC machining, prototyping, product retrofit and small-batch manufacturing. Engineering support for hardware products.<br><br><strong>Use cases:</strong> Medical devices (dental), industry prototypes, bespoke mechanical parts."
+              intro: "Digital fabrication — 3D printing, CNC, and prototyping for innovative product development.",
+              details: "<strong>Capabilities:</strong> High-precision 3D printing (<0.05mm), CNC machining, rapid prototyping, product retrofits, and small-batch production with engineering expertise.<br><br><strong>Use Cases:</strong> Medical devices (e.g., dental), industrial prototypes, and custom mechanical components."
             },
             cloud: {
               title: "CATECH Cloud",
-              intro: "Cloud & hosting — hybrid infrastructure, VPS and managed servers.",
-              details: "<strong>What we do:</strong> Private/hybrid cloud solutions, VPS, backups, and managed hosting with local redundancy. Custom SLAs and enterprise-grade monitoring.<br><br><strong>Benefits:</strong> Data sovereignty, resilience, and improved RTO/RPO for business continuity."
+              intro: "Cloud and hosting — hybrid infrastructure, VPS, and managed servers for resilient data management.",
+              details: "<strong>What We Do:</strong> Provide private/hybrid cloud setups, VPS, backups, and managed hosting with local redundancy, custom SLAs, and enterprise monitoring.<br><br><strong>Benefits:</strong> Data sovereignty, enhanced resilience, and optimized RTO/RPO for uninterrupted business continuity."
             }
           }
         },
         pt: {
           brandTitle: "CATECH Holding",
-          brandSub: "Sistemas para empresas modernas",
-          leadTitle: "CATECH Holding — Sistemas para empresas modernas",
-          leadSub: "Integramos infraestrutura, automação e fabricação digital em soluções confiáveis e em conformidade para PMEs e indústria leve.",
+          brandSub: "Infraestrutura integrada, automação e fabricação digital para empresas modernas",
+          leadTitle: "CATECH Holding — Sistemas para a empresa moderna",
+          leadSub: "Integramos infraestrutura, automação e fabricação digital em soluções confiáveis e em conformidade, adaptadas para PMEs e indústria leve, facilitando a transformação digital eficiente.",
+          contactSales: "Contato Comercial",
+          snapshotTitle: "Resumo",
+          metaFocusLabel: "Foco",
+          metaOfferLabel: "Oferta",
+          metaCompLabel: "Conformidade",
           aboutTitle: "Sobre a Holding",
-          aboutDesc: "A CATECH Holding unifica tecnologia, engenharia e produção num único modelo de governança — entregando rastreabilidade, serviços modulares e contratos SLA recorrentes.",
+          aboutDesc: "A CATECH Holding une tecnologia, engenharia e produção em um modelo de governança único, garantindo rastreabilidade, serviços modulares e contratos SLA recorrentes para operações fluidas.",
           holdingName: "CATECH Holding",
           holdingSub: "Infraestrutura Integrada • Automação • Fabricação Digital",
-          missionText: "Entregar soluções técnicas integradas que simplifiquem a transformação digital para PMEs — combinando infraestrutura, automação e fabricação em serviços escaláveis e rastreáveis.",
+          missionTitle: "Missão",
+          missionText: "Oferecer soluções técnicas integradas que simplifiquem a transformação digital para PMEs, combinando infraestrutura, automação e fabricação em serviços responsáveis, escaláveis e de alto valor.",
           metaFocus: "PMEs · Indústria",
           metaOffer: "Infra · Automação · Lab · Cloud",
           metaComp: "LGPD · ISO 27001",
+          subDetailsPrompt: "Clique ou pressione Enter para detalhes",
           subs: {
+            holding: {
+              title: "CATECH Holding",
+              intro: "Uma holding unificada integrando soluções tecnológicas avançadas para empresas modernas.",
+              details: "<strong>Como Operamos:</strong> A CATECH Holding atua por meio de um modelo de governança centralizado, integrando perfeitamente suas subsidiárias (Info, Systems, Lab e Cloud) para oferecer soluções completas com rastreabilidade total, conformidade e SLAs modulares para entrega eficiente.<br><br><strong>Por Que Atrativa ao Mercado:</strong> Para PMEs em transformação digital, a CATECH oferece soluções escaláveis e econômicas que reduzem a complexidade de fornecedores, garantem conformidade regulatória (LGPD, ISO 27001) e impulsionam a eficiência operacional, permitindo que as empresas foquem no crescimento."
+            },
             info: {
               title: "CATECH Info",
-              intro: "Infraestrutura & segurança — TI gerenciada e redes corporativas.",
-              details: "<strong>O que fazemos:</strong> Projetos de rede, servidores Linux/Windows, backups, VPN, segurança, conformidade LGPD, monitoramento remoto e operações em SLA.<br><br><strong>Clientes:</strong> PMEs, saúde, serviços profissionais."
+              intro: "Infraestrutura e segurança — TI gerenciada e redes corporativas para desempenho confiável.",
+              details: "<strong>O Que Fazemos:</strong> Projetamos redes, gerenciamos servidores Linux/Windows, backups, VPNs, segurança corporativa, conformidade LGPD, monitoramento remoto e operações baseadas em SLA.<br><br><strong>Clientes:</strong> PMEs, saúde e serviços profissionais em busca de bases de TI robustas e seguras."
             },
             systems: {
               title: "CATECH Systems",
-              intro: "Automação & IoT — CLPs, controladores e controle de processos integrados.",
-              details: "<strong>O que fazemos:</strong> Programação de CLP, redes de sensores, automação industrial/comercial, telemetria e integração com sistemas corporativos.<br><br><strong>Abordagem:</strong> Sistemas modulares, integração de campo, suporte e documentação completa."
+              intro: "Automação e IoT — CLPs, controladores e controles de processos integrados para operações otimizadas.",
+              details: "<strong>O Que Fazemos:</strong> Programamos CLPs, implantamos redes de sensores, automatizamos processos industriais e comerciais, habilitamos telemetria remota e integramos com sistemas empresariais.<br><br><strong>Abordagem:</strong> Designs modulares, integração no local, suporte contínuo e documentação abrangente para confiabilidade a longo prazo."
             },
             lab: {
               title: "CATECH Lab",
-              intro: "Fabricação digital — impressão 3D, CNC e prototipagem para desenvolvimento de produtos.",
-              details: "<strong>Capacidades:</strong> Impressão 3D de alta precisão (&lt;0,05mm), usinagem CNC, prototipagem, retrofit e produção em pequenos lotes. Suporte de engenharia para produtos de hardware.<br><br><strong>Casos de uso:</strong> Dispositivos médicos (odontologia), protótipos industriais, peças mecânicas sob medida."
+              intro: "Fabricação digital — impressão 3D, CNC e prototipagem para desenvolvimento inovador de produtos.",
+              details: "<strong>Capacidades:</strong> Impressão 3D de alta precisão (<0,05mm), usinagem CNC, prototipagem rápida, retrofits de produtos e produção em pequenos lotes com expertise em engenharia.<br><br><strong>Casos de Uso:</strong> Dispositivos médicos (ex.: odontológicos), protótipos industriais e componentes mecânicos personalizados."
             },
             cloud: {
               title: "CATECH Cloud",
-              intro: "Cloud & hospedagem — infraestrutura híbrida, VPS e servidores gerenciados.",
-              details: "<strong>O que fazemos:</strong> Soluções de nuvem privada/híbrida, VPS, backups e hospedagem gerenciada com redundância local. SLAs customizados e monitoramento empresarial.<br><br><strong>Benefícios:</strong> Soberania de dados, resiliência e RTO/RPO aprimorados para continuidade do negócio."
+              intro: "Nuvem e hospedagem — infraestrutura híbrida, VPS e servidores gerenciados para gerenciamento resiliente de dados.",
+              details: "<strong>O Que Fazemos:</strong> Fornecemos configurações de nuvem privada/híbrida, VPS, backups e hospedagem gerenciada com redundância local, SLAs personalizados e monitoramento empresarial.<br><br><strong>Benefícios:</strong> Soberania de dados, resiliência aprimorada e otimização de RTO/RPO para continuidade ininterrupta dos negócios."
             }
           }
         }
@@ -346,14 +375,21 @@
         el.brandSub.textContent = c.brandSub;
         el.leadTitle.textContent = c.leadTitle;
         el.leadSub.textContent = c.leadSub;
+        el.contactSales.textContent = c.contactSales;
+        el.snapshotTitle.textContent = c.snapshotTitle;
+        el.metaFocusLabel.textContent = c.metaFocusLabel;
+        el.metaOfferLabel.textContent = c.metaOfferLabel;
+        el.metaCompLabel.textContent = c.metaCompLabel;
         el.aboutTitle.textContent = c.aboutTitle;
         el.aboutDesc.textContent = c.aboutDesc;
         el.holdingName.textContent = c.holdingName;
         el.holdingSub.textContent = c.holdingSub;
+        el.missionTitle.textContent = c.missionTitle;
         el.missionText.textContent = c.missionText;
         el.metaFocus.textContent = c.metaFocus;
         el.metaOffer.textContent = c.metaOffer;
         el.metaComp.textContent = c.metaComp;
+        el.subPrompts.forEach(prompt => prompt.textContent = c.subDetailsPrompt);
         // update button aria-pressed
         el.langEnBtn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
         el.langPtBtn.setAttribute('aria-pressed', lang === 'pt' ? 'true' : 'false');
@@ -415,7 +451,15 @@
       // attach listeners
       el.langEnBtn.addEventListener('click', () => setLang('en'));
       el.langPtBtn.addEventListener('click', () => setLang('pt'));
-      // keyboard + click for subs
+      // holding listeners
+      el.holding.addEventListener('click', () => openModal('holding'));
+      el.holding.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal('holding');
+        }
+      });
+      // subs listeners
       el.subs.forEach(sub => {
         const key = sub.dataset.key;
         sub.addEventListener('click', () => openModal(key));
@@ -433,12 +477,11 @@
       });
       // initial lang
       setLang('en');
-      // accessibility: ensure all sub elements have proper aria attributes (label already set)
-      // small enhancement: show focus outline for keyboard users (native)
+      // accessibility enhancement
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Tab') document.documentElement.classList.add('user-is-tabbing');
       }, { once: true });
-      // expose some controls for debugging in console (optional)
+      // expose for debugging
       window.CATECH = {
         setLang,
         openModal,
