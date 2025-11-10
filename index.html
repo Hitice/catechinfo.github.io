@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CATECH Info — Infraestrutura e Segurança</title>
+  <meta name="description" content="CATECH Info — Infraestrutura, automação e fabricação digital integrada. Contato: adm.nuvem@protonmail.com" />
+  <link rel="icon" href="https://raw.githubusercontent.com/Hitice/Hitice/main/icon.png" />
+  <style>
+    :root {
+      --bg: #050506;
+      --panel: #0b0b0c;
+      --accent: #00ff9f;
+      --muted: #a3a7ab;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+      --glass: rgba(255,255,255,0.03);
+    }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: linear-gradient(180deg, #020203 0%, #090a0b 100%);
+      color: #fff;
+      font-family: Inter, Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+      scroll-behavior: smooth;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #003a2f 0%, #006a5a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-weight: 700;
+      color: var(--accent);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    }
+    h1 {
+      font-size: 1.9rem;
+      margin: 0;
+      font-weight: 600;
+    }
+    p.lead {
+      margin: 6px 0 16px;
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 640px;
+    }
+    .btn {
+      background: transparent;
+      border: 1px solid rgba(0,255,159,0.2);
+      color: var(--accent);
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: var(--mono);
+      display: inline-block;
+      transition: 0.2s ease;
+    }
+    .btn:hover {
+      background: rgba(0,255,159,0.1);
+      transform: translateY(-2px);
+    }
+    section {
+      margin-top: 40px;
+    }
+    h2 {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      font-family: var(--mono);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 16px;
+      transition: 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(0,255,159,0.15);
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-family: var(--mono);
+      color: #fff;
+      font-size: 1rem;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0 40px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 6px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+      h1 { font-size: 1.6rem; }
+      .logo { width: 52px; height: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <header>
+      <div class="logo">C⌁</div>
+      <div>
+        <h1>CATECH Info</h1>
+        <p class="lead">
+          Infraestrutura, automação e segurança digital integradas — conectando tecnologia, máquinas e nuvem
+          para empresas que exigem confiabilidade e precisão.
+        </p>
+        <a class="btn" href="#servicos">Ver serviços</a>
+        <a class="btn" href="mailto:adm.nuvem@protonmail.com?subject=Contato%20CATECH%20Info">E-mail</a>
+        <a class="btn" href="https://wa.me/5534991176599" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </header>
+
+    <section id="sobre">
+      <h2>Sobre a CATECH Info</h2>
+      <p>
+        A CATECH Info é a unidade de infraestrutura da <strong>CATECH Holding</strong>, especializada em TI corporativa, automação e
+        segurança digital. Atuamos no diagnóstico, implantação e manutenção de ambientes híbridos, com
+        conformidade LGPD, rastreabilidade técnica e contratos SLA de alta disponibilidade.
+      </p>
+    </section>
+
+    <section id="servicos">
+      <h2>Serviços principais</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Infraestrutura & Servidores</h3>
+          <p>Projetos de rede, servidores Linux/Windows, virtualização e backup corporativo.</p>
+        </div>
+        <div class="card">
+          <h3>Segurança & LGPD</h3>
+          <p>Auditorias, políticas de segurança, monitoramento e adequação ISO/IEC 27001.</p>
+        </div>
+        <div class="card">
+          <h3>Automação & IoT</h3>
+          <p>Integração de CLPs, sensores e automação comercial/industrial para eficiência operacional.</p>
+        </div>
+        <div class="card">
+          <h3>Cloud & Hospedagem</h3>
+          <p>Servidores VPS, infraestrutura híbrida e soluções em nuvem com redundância local.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="diferenciais">
+      <h2>Diferenciais</h2>
+      <ul style="color:var(--muted);line-height:1.6;padding-left:18px;">
+        <li>Integração completa entre TI, automação e fabricação digital.</li>
+        <li>Documentação técnica e rastreabilidade total em todas as entregas.</li>
+        <li>Contratos SLA, suporte contínuo e manutenção preventiva.</li>
+        <li>Foco em PMEs e soluções escaláveis conforme a demanda.</li>
+      </ul>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p style="color:var(--muted);line-height:1.7;">
+        📧 <strong>E-mail:</strong> <a href="mailto:adm.nuvem@protonmail.com">adm.nuvem@protonmail.com</a><br>
+        📱 <strong>WhatsApp:</strong> <a href="https://wa.me/5534991176599" target="_blank">+55 (34) 99117-6599</a><br>
+        🧾 <strong>CNPJ:</strong> 39.914.870/0001-01<br>
+        🌎 <strong>Local:</strong> Brasil
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 CATECH Info — Todos os direitos reservados.<br>
+      Parte da <strong>CATECH Holding</strong> — Infraestrutura, Automação e Fabricação Digital Integrada.<br>
+      <a href="https://github.com/Hitice" target="_blank">GitHub</a> · 
+      <a href="https://t.me/Hitice" target="_blank">Telegram</a> · 
+      <a href="mailto:adm.nuvem@protonmail.com">E-mail</a> · 
+      <a href="https://wa.me/5534991176599" target="_blank">WhatsApp</a></p>
+    </footer>
+  </main>
+
+</body>
+</html>
