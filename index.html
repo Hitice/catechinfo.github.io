@@ -1,245 +1,229 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CATECH Info — Infraestrutura e Segurança Digital</title>
-  <meta name="description" content="CATECH Info — Infraestrutura, automação e segurança digital integrada. Parte da CATECH Holding.">
-  <link rel="icon" href="https://raw.githubusercontent.com/Hitice/Hitice/main/icon.png" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CATECH Holding — Integrated Industrial Systems</title>
+  <meta name="description" content="CATECH Holding — technology, automation and digital manufacturing integrated for modern industries.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a2c1d6e2c3.js" crossorigin="anonymous"></script>
-
   <style>
     :root {
-      --bg: #050506;
-      --accent: #00ff9f;
-      --text: #e2e2e2;
-      --muted: #9aa0a6;
-      --card: rgba(255,255,255,0.04);
-      --font-sans: 'Poppins', system-ui, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
+      --bg: #0f1113;
+      --card: #181b1f;
+      --accent: #00d6a3;
+      --muted: #9da3a8;
+      --font: 'Poppins', sans-serif;
+      --radius: 12px;
     }
-
     * { box-sizing: border-box; }
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      background: radial-gradient(circle at top left, #0a0b0c, #030304);
-      color: var(--text);
-      font-family: var(--font-sans);
-      scroll-behavior: smooth;
+      background: linear-gradient(180deg, #0c0e10, #141719);
+      color: #f2f3f4;
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
     }
-
     main {
       max-width: 1100px;
       margin: 0 auto;
       padding: 60px 20px;
     }
-
     header {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-      gap: 18px;
-      margin-bottom: 60px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
     }
-
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
     .logo {
-      font-family: var(--font-mono);
-      font-size: 1.8rem;
-      color: var(--accent);
-      border: 2px solid var(--accent);
-      padding: 10px 18px;
-      border-radius: 10px;
-      background: rgba(0,255,159,0.06);
-      display: inline-block;
-      box-shadow: 0 0 20px rgba(0,255,159,0.1);
+      width: 54px;
+      height: 54px;
+      background: linear-gradient(135deg, #00d6a3, #009c80);
+      color: #0d1113;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius);
+      font-size: 20px;
     }
-
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-      font-weight: 600;
-      color: #fff;
+    h1 { margin: 0; font-size: 1.6rem; }
+    .lang-toggle {
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent;
+      color: #f2f3f4;
+      border-radius: var(--radius);
+      padding: 6px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      transition: 0.2s ease;
     }
-
-    p.lead {
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.6;
-      max-width: 680px;
+    .lang-toggle:hover {
+      background: rgba(255,255,255,0.05);
     }
-
-    .btn {
-      display: inline-block;
-      margin-top: 16px;
-      background: var(--accent);
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #00d88a;
-      transform: translateY(-2px);
-    }
-
     section {
-      margin-top: 60px;
+      margin-top: 30px;
+      text-align: center;
     }
-
     h2 {
-      font-family: var(--font-mono);
-      font-size: 1.2rem;
       color: var(--accent);
-      border-left: 4px solid var(--accent);
-      padding-left: 10px;
-      margin-bottom: 20px;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
     }
-
-    .grid {
+    p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+    .units {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 30px;
     }
-
-    .card {
+    .unit {
       background: var(--card);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 10px;
+      border-radius: var(--radius);
       padding: 20px;
+      border: 1px solid rgba(255,255,255,0.05);
       transition: 0.3s ease;
     }
-
-    .card:hover {
+    .unit:hover {
       border-color: var(--accent);
-      transform: translateY(-3px);
+      transform: translateY(-4px);
     }
-
-    .card i {
+    .unit i {
       color: var(--accent);
       font-size: 1.4rem;
       margin-bottom: 10px;
     }
-
-    .card h3 {
-      margin: 0 0 6px;
+    .unit h3 {
+      margin: 0;
       font-size: 1.1rem;
       color: #fff;
     }
-
-    .card p {
+    .unit p {
+      margin-top: 6px;
+      font-size: 0.9rem;
       color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
     }
-
     footer {
       text-align: center;
-      margin-top: 80px;
-      padding: 30px 10px;
+      margin-top: 60px;
       border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 20px;
       color: var(--muted);
       font-size: 0.9rem;
+      line-height: 1.6;
     }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 14px;
-      font-family: var(--font-mono);
-    }
-
-    .contact-info i {
-      color: var(--accent);
-      margin-right: 6px;
-    }
-
-    @media (max-width: 700px) {
-      h1 { font-size: 1.6rem; }
-      .lead { font-size: 0.95rem; }
-    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-
   <main>
     <header>
-      <div class="logo">C⌁TECH</div>
-      <h1>CATECH Info</h1>
-      <p class="lead">
-        Infraestrutura, automação e segurança digital integradas — conectando tecnologia, máquinas e nuvem
-        para empresas que exigem confiabilidade e precisão.
-      </p>
-      <a class="btn" href="https://wa.me/5534991176599" target="_blank"><i class="fa-brands fa-whatsapp"></i> Entrar em contato</a>
+      <div class="brand">
+        <div class="logo">C⌁</div>
+        <h1>CATECH Holding</h1>
+      </div>
+      <button class="lang-toggle" id="langBtn"><i class="fa-solid fa-globe"></i> English</button>
     </header>
 
-    <section id="servicos">
-      <h2>Serviços principais</h2>
-      <div class="grid">
-        <div class="card">
-          <i class="fa-solid fa-network-wired"></i>
-          <h3>Infraestrutura & Servidores</h3>
-          <p>Projetos de rede, servidores Linux/Windows, virtualização e backup corporativo.</p>
+    <!-- English Content -->
+    <section id="content-en">
+      <h2>Integrated Industrial Systems</h2>
+      <p>CATECH Holding connects technology, automation, and digital manufacturing into one ecosystem — delivering reliable, scalable solutions for modern industries.</p>
+
+      <div class="units">
+        <div class="unit">
+          <i class="fa-solid fa-server"></i>
+          <h3>CATECH Info</h3>
+          <p>Infrastructure, servers, and cybersecurity for enterprise environments.</p>
         </div>
-        <div class="card">
-          <i class="fa-solid fa-shield-halved"></i>
-          <h3>Segurança & LGPD</h3>
-          <p>Auditorias, políticas de segurança, monitoramento e adequação ISO/IEC 27001.</p>
-        </div>
-        <div class="card">
+        <div class="unit">
           <i class="fa-solid fa-robot"></i>
-          <h3>Automação & IoT</h3>
-          <p>Integração de CLPs, sensores e automação comercial/industrial para eficiência operacional.</p>
+          <h3>CATECH Systems</h3>
+          <p>Automation, IoT, and process control for industrial and commercial systems.</p>
         </div>
-        <div class="card">
+        <div class="unit">
+          <i class="fa-solid fa-cubes-stacked"></i>
+          <h3>CATECH Lab</h3>
+          <p>Digital fabrication, CNC machining, and prototyping of smart devices.</p>
+        </div>
+        <div class="unit">
           <i class="fa-solid fa-cloud"></i>
-          <h3>Cloud & Hospedagem</h3>
-          <p>Servidores VPS, infraestrutura híbrida e soluções em nuvem com redundância local.</p>
+          <h3>CATECH Cloud</h3>
+          <p>Cloud infrastructure and managed hosting for secure digital operations.</p>
         </div>
       </div>
     </section>
 
-    <section id="diferenciais">
-      <h2>Diferenciais</h2>
-      <ul style="color:var(--muted);line-height:1.7;padding-left:18px;">
-        <li>Integração completa entre TI, automação e fabricação digital.</li>
-        <li>Documentação técnica e rastreabilidade em todas as entregas.</li>
-        <li>Contratos SLA, suporte contínuo e manutenção preventiva.</li>
-        <li>Foco em PMEs e soluções escaláveis conforme a demanda.</li>
-      </ul>
+    <!-- Portuguese Content -->
+    <section id="content-pt" style="display:none;">
+      <h2>Sistemas Industriais Integrados</h2>
+      <p>A CATECH Holding conecta tecnologia, automação e fabricação digital em um único ecossistema — entregando soluções confiáveis e escaláveis para indústrias modernas.</p>
+
+      <div class="units">
+        <div class="unit">
+          <i class="fa-solid fa-server"></i>
+          <h3>CATECH Info</h3>
+          <p>Infraestrutura, servidores e cibersegurança para ambientes corporativos.</p>
+        </div>
+        <div class="unit">
+          <i class="fa-solid fa-robot"></i>
+          <h3>CATECH Systems</h3>
+          <p>Automação, IoT e controle de processos industriais e comerciais.</p>
+        </div>
+        <div class="unit">
+          <i class="fa-solid fa-cubes-stacked"></i>
+          <h3>CATECH Lab</h3>
+          <p>Fabricação digital, usinagem CNC e prototipagem de dispositivos inteligentes.</p>
+        </div>
+        <div class="unit">
+          <i class="fa-solid fa-cloud"></i>
+          <h3>CATECH Cloud</h3>
+          <p>Infraestrutura em nuvem e hospedagem gerenciada para operações seguras.</p>
+        </div>
+      </div>
     </section>
 
     <footer>
-      <div class="contact-info">
-        <div><i class="fa-solid fa-envelope"></i> <a href="mailto:adm.nuvem@protonmail.com">adm.nuvem@protonmail.com</a></div>
-        <div><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5534991176599" target="_blank">+55 (34) 99117-6599</a></div>
-        <div><i class="fa-solid fa-location-dot"></i> Uberlândia - MG</div>
-      </div>
-      <p style="margin-top:20px;">
-        © 2025 <strong>CATECH Info</strong> — Todos os direitos reservados.<br>
-        Parte da <strong>CATECH Holding</strong> — Infraestrutura, Automação e Fabricação Digital Integrada.
-      </p>
+      <p>© 2025 CATECH Holding — All rights reserved.<br>
+      CNPJ: 39.914.870/0001-01 · Uberlândia - MG<br>
+      <a href="mailto:adm.nuvem@protonmail.com">adm.nuvem@protonmail.com</a> · 
+      <a href="https://wa.me/5534991176599" target="_blank">+55 (34) 99117-6599</a></p>
     </footer>
   </main>
 
+  <script>
+    const langBtn = document.getElementById('langBtn');
+    const en = document.getElementById('content-en');
+    const pt = document.getElementById('content-pt');
+    let current = 'en';
+
+    langBtn.addEventListener('click', () => {
+      if (current === 'en') {
+        en.style.display = 'none';
+        pt.style.display = 'block';
+        langBtn.innerHTML = '<i class="fa-solid fa-globe"></i> Português';
+        current = 'pt';
+      } else {
+        en.style.display = 'block';
+        pt.style.display = 'none';
+        langBtn.innerHTML = '<i class="fa-solid fa-globe"></i> English';
+        current = 'en';
+      }
+    });
+  </script>
 </body>
 </html>
