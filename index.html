@@ -5,13 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CATECH Holding — Integrated Infrastructure & Digital Fabrication</title>
   <meta name="description" content="CATECH Holding — integrated infrastructure, automation and digital fabrication for PMEs. CATECH Info, Lab, Systems, Cloud." />
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
-
   <!-- Font Awesome (CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
-
   <style>
     :root{
       --bg: #f6f7f8;
@@ -28,7 +25,6 @@
       --shadow: 0 10px 30px rgba(15,20,18,0.06);
       --glass: rgba(255,255,255,0.65);
     }
-
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;background:linear-gradient(180deg,#fbfcfd 0%, #f2f4f5 100%);color:#07120f;font-family:var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
     a{color:inherit}
@@ -36,15 +32,13 @@
     /* Skip link */
     .skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{left:20px;top:20px;width:auto;height:auto;padding:8px 12px;background:#000;color:#fff;border-radius:6px;z-index:9999}
-
     header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
     .brand{display:flex;align-items:center;gap:14px}
     .logo{
       width:64px;height:64px;border-radius:10px;display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(180deg,var(--accent),var(--accent-2));
-      color:#fff;font-weight:700;font-family:var(--serif);
+      background-image: url('logo.png'); background-size: contain; background-position: center; background-repeat: no-repeat;
       box-shadow: var(--shadow);
-      font-size:22px;
+      text-indent: -9999px; overflow: hidden;
     }
     .brand h1{margin:0;font-size:20px;letter-spacing:0.2px}
     .brand p{margin:0;color:var(--muted);font-size:13px}
@@ -114,14 +108,12 @@
       header.top{flex-direction:column;align-items:flex-start;gap:12px}
       .holding{flex-direction:column;align-items:flex-start;gap:12px}
     }
-
     /* subtle interactions */
     .icon {opacity:0.9}
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-
   <div class="wrap" id="main">
     <header class="top" role="banner" aria-label="CATECH header">
       <div class="brand" aria-label="branding">
@@ -131,13 +123,11 @@
           <p id="brand-sub">Integrated infrastructure, automation and digital fabrication</p>
         </div>
       </div>
-
       <nav class="controls" aria-label="controls">
         <button class="lang-btn" id="lang-en" aria-pressed="true" aria-label="English">🇬🇧 EN</button>
         <button class="lang-btn" id="lang-pt" aria-pressed="false" aria-label="Português">🇧🇷 PT</button>
       </nav>
     </header>
-
     <main>
       <!-- HERO -->
       <section class="hero" aria-label="intro">
@@ -146,13 +136,11 @@
             <h2 class="lead" id="lead-title">CATECH Holding — Systems for the modern enterprise</h2>
             <p class="sub" id="lead-sub">We integrate infrastructure, automation and digital fabrication into reliable, compliant solutions for SMEs and light industry.</p>
           </div>
-
           <div class="actions" role="group" aria-label="primary actions">
             <a class="btn primary" href="mailto:adm.nuvem@protonmail.com" id="contact-sales">Contact Sales</a>
             <a class="btn" href="https://wa.me/5534991176599" target="_blank" id="whatsapp" rel="noopener">WhatsApp</a>
           </div>
         </div>
-
         <aside class="aside-card" aria-label="snapshot">
           <h4 style="margin:0 0 8px">Snapshot</h4>
           <div class="meta-row">
@@ -162,14 +150,12 @@
           </div>
         </aside>
       </section>
-
       <!-- ORGANOGRAM -->
       <section class="section" aria-label="organogram">
         <div class="org-title">
           <h2 id="about-title">About the Holding</h2>
         </div>
         <p class="org-desc" id="about-desc">CATECH Holding unifies technology, engineering and production in a single governance model — delivering traceability, modular services and recurring SLA contracts.</p>
-
         <div class="org-chart" role="group" aria-label="organizational chart">
           <div class="holding" aria-hidden="false">
             <div class="left">
@@ -183,7 +169,6 @@
               <div id="holding-city">Uberlândia - MG</div>
             </div>
           </div>
-
           <div class="subs-row" role="list" aria-label="subsidiaries">
             <div class="sub" role="button" tabindex="0" data-key="info" aria-labelledby="sub-info-title sub-info-desc">
               <div>
@@ -192,7 +177,6 @@
               </div>
               <div style="font-size:12px;color:var(--muted);margin-top:10px">Click or press Enter for details</div>
             </div>
-
             <div class="sub" role="button" tabindex="0" data-key="systems" aria-labelledby="sub-sys-title sub-sys-desc">
               <div>
                 <div id="sub-sys-title" class="title">CATECH Systems</div>
@@ -200,7 +184,6 @@
               </div>
               <div style="font-size:12px;color:var(--muted);margin-top:10px">Click or press Enter for details</div>
             </div>
-
             <div class="sub" role="button" tabindex="0" data-key="lab" aria-labelledby="sub-lab-title sub-lab-desc">
               <div>
                 <div id="sub-lab-title" class="title">CATECH Lab</div>
@@ -208,7 +191,6 @@
               </div>
               <div style="font-size:12px;color:var(--muted);margin-top:10px">Click or press Enter for details</div>
             </div>
-
             <div class="sub" role="button" tabindex="0" data-key="cloud" aria-labelledby="sub-cloud-title sub-cloud-desc">
               <div>
                 <div id="sub-cloud-title" class="title">CATECH Cloud</div>
@@ -219,21 +201,18 @@
           </div>
         </div>
       </section>
-
       <!-- Mission -->
       <section class="mission" aria-label="mission">
         <h3 id="mission-title">Mission</h3>
         <p id="mission-text">Deliver integrated technical solutions that simplify digital transformation for SMEs — combining infrastructure, automation and manufacturing into accountable, scalable services.</p>
       </section>
     </main>
-
     <!-- FOOTER -->
     <footer>
       <div class="contact" id="footer-contact">
-        <div><strong>CATECH Holding</strong> — <a href="mailto:adm.nuvem@protonmail.com">adm.nuvem@protonmail.com</a></div>
+        <div><img src="footer.png" alt="CATECH Holding" style="vertical-align:middle; margin-right:5px; height:1.2em;"> — <a href="mailto:adm.nuvem@protonmail.com">adm.nuvem@protonmail.com</a></div>
         <div>Tel: +55 (34) 99117-6599 · Uberlândia - MG</div>
       </div>
-
       <div class="social" aria-label="social links">
         <a href="https://github.com/Hitice" target="_blank" aria-label="GitHub" rel="noopener"><i class="fa-brands fa-github icon"></i></a>
         <a href="https://t.me/Hitice" target="_blank" aria-label="Telegram" rel="noopener"><i class="fa-brands fa-telegram icon"></i></a>
@@ -241,7 +220,6 @@
       </div>
     </footer>
   </div>
-
   <!-- MODAL BACKDROP -->
   <div class="modal-backdrop" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal" role="document">
@@ -251,7 +229,6 @@
       <div id="modal-details" class="meta"></div>
     </div>
   </div>
-
   <script>
     /*
       Data model for content in both languages.
@@ -283,7 +260,6 @@
         modalClose: document.getElementById('modalClose'),
         wrap: document.querySelector('.wrap')
       };
-
       const content = {
         en: {
           brandTitle: "CATECH Holding",
@@ -358,17 +334,14 @@
           }
         }
       };
-
       // state
       let currentLang = 'en';
       let lastFocusedBeforeModal = null;
-
       // helpers
       function setLang(lang) {
         currentLang = lang;
         document.documentElement.lang = (lang === 'pt') ? 'pt-BR' : 'en';
         const c = content[lang];
-
         el.brandTitle.textContent = c.brandTitle;
         el.brandSub.textContent = c.brandSub;
         el.leadTitle.textContent = c.leadTitle;
@@ -381,12 +354,10 @@
         el.metaFocus.textContent = c.metaFocus;
         el.metaOffer.textContent = c.metaOffer;
         el.metaComp.textContent = c.metaComp;
-
         // update button aria-pressed
         el.langEnBtn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
         el.langPtBtn.setAttribute('aria-pressed', lang === 'pt' ? 'true' : 'false');
       }
-
       // open modal with content key
       function openModal(key) {
         const entry = content[currentLang].subs[key];
@@ -401,7 +372,6 @@
         trapFocus(el.modalWrap);
         el.modalClose.focus();
       }
-
       function closeModal() {
         el.modalWrap.style.display = 'none';
         el.modalWrap.setAttribute('aria-hidden', 'true');
@@ -412,7 +382,6 @@
         releaseFocusTrap();
         if (lastFocusedBeforeModal) lastFocusedBeforeModal.focus();
       }
-
       // focus trap (simple)
       let focusableNodes = [];
       let handleKeydownTrap = null;
@@ -443,11 +412,9 @@
         focusableNodes = [];
         handleKeydownTrap = null;
       }
-
       // attach listeners
       el.langEnBtn.addEventListener('click', () => setLang('en'));
       el.langPtBtn.addEventListener('click', () => setLang('pt'));
-
       // keyboard + click for subs
       el.subs.forEach(sub => {
         const key = sub.dataset.key;
@@ -459,22 +426,18 @@
           }
         });
       });
-
       // modal events
       el.modalClose.addEventListener('click', closeModal);
       el.modalWrap.addEventListener('click', (e) => {
         if (e.target === el.modalWrap) closeModal();
       });
-
       // initial lang
       setLang('en');
-
       // accessibility: ensure all sub elements have proper aria attributes (label already set)
       // small enhancement: show focus outline for keyboard users (native)
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Tab') document.documentElement.classList.add('user-is-tabbing');
       }, { once: true });
-
       // expose some controls for debugging in console (optional)
       window.CATECH = {
         setLang,
